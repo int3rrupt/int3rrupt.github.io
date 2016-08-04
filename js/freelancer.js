@@ -42,3 +42,54 @@
     });
 
 })(jQuery); // End of use strict
+
+$(function() {
+
+    var $allVideos = $("iframe[src^='//player.vimeo.com'], iframe[src^='https://www.youtube.com'], object, embed"),
+    $fluidEl = $("figure");
+
+	$allVideos.each(function() {
+
+	  $(this)
+	    // jQuery .data does not work on object/embed elements
+	    .attr('data-aspectRatio', this.height / this.width)
+	    .removeAttr('height')
+	    .removeAttr('width');
+
+	});
+
+	$(window).resize(function() {
+
+	  var newWidth = $fluidEl.width();
+     if (newWidth == 0)
+     {
+        var windowWidth = $(window).width();
+        if (windowWidth < 768)
+        {
+           newWidth = windowWidth - 60;
+        }
+        else if (windowWidth >= 768 && windowWidth < 992)
+        {
+           newWidth = 750 - 60;
+        }
+        else if (windowWidth >= 992 && windowWidth < 1200)
+        {
+           newWidth = 970 - 60;
+        }
+        else if (windowWidth >= 1200)
+        {
+           newWidth = 1170 - 450;
+        }
+     }
+	  $allVideos.each(function() {
+
+	    var $el = $(this);
+	    $el
+	        .width(newWidth)
+	        .height(newWidth * $el.attr('data-aspectRatio'));
+
+	  });
+
+	}).resize();
+
+});
