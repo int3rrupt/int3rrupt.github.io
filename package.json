@@ -1,9 +1,9 @@
 {
-  "name": "freelancer",
-  "title": "Freelancer",
-  "version": "1.1.1",
-  "homepage": "http://startbootstrap.com/template-overviews/freelancer",
-  "author": "Start Bootstrap",
+  "name": "adrianreyes.io",
+  "title": "adrianreyes.io",
+  "version": "0.1.0",
+  "homepage": "http://adrianreyes.io",
+  "author": "Adrian Reyes",
   "license": {
     "type": "MIT",
     "url": "https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE"
@@ -13,7 +13,7 @@
     "browser-sync": "^2.13.0",
     "font-awesome": "^4.6.3",
     "gulp": "^3.9.1",
-    "gulp-clean-css": "^2.0.10",
+    "gulp-clean-css": "^3.9.0",
     "gulp-header": "^1.8.7",
     "gulp-less": "^3.1.0",
     "gulp-rename": "^1.2.2",
@@ -22,6 +22,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/BlackrockDigital/startbootstrap-freelancer.git"
+    "url": "https://github.com/int3rrupt/int3rrupt.github.io/"
   }
 }

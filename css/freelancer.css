@@ -1,6 +1,6 @@
 /*!
- * Start Bootstrap - Freelancer v1.1.1 (http://startbootstrap.com/template-overviews/freelancer)
- * Copyright 2013-2016 Start Bootstrap
+ * Start Bootstrap - adrianreyes.io v0.1.0 (http://adrianreyes.io)
+ * Copyright 2013-2017 Adrian Reyes
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
 body {
@@ -37,18 +37,8 @@ hr.star-primary {
   border: none;
   border-top: solid 5px;
   text-align: center;
-  max-width: 250px;
+  max-width: 150px;
   margin: 25px auto 30px;
-}
-hr.star-light:after,
-hr.star-primary:after {
-  /*content: "\f005";
-  font-family: FontAwesome;
-  display: inline-block;
-  position: relative;
-  top: -0.8em;
-  font-size: 2em;
-  padding: 0 0.25em;*/
 }
 hr.star-light {
   border-color: white;
@@ -183,7 +173,7 @@ section {
 }
 section h2 {
   margin: 0;
-  font-size: 3em;
+  font-size: 2em;
 }
 section.success {
   background: #42b7da;
@@ -197,30 +187,30 @@ section.success {
     padding-top: 75px;
   }
 }
-#projects .portfolio-item {
+#projects .projects-item {
   margin: 0 0 15px;
   right: 0;
 }
-#projects .portfolio-item .portfolio-link {
+#projects .projects-item .project-link {
   display: block;
   position: relative;
   max-width: 400px;
   margin: 0 auto;
 }
-#projects .portfolio-item .portfolio-link .caption {
+#projects .projects-item .project-link .caption {
   background: rgba(66, 183, 218, 0.9);
   position: absolute;
   width: 100%;
   height: 100%;
   opacity: 0;
-  transition: all ease 0.5s;
-  -webkit-transition: all ease 0.5s;
-  -moz-transition: all ease 0.5s;
+  transition: all ease 0.25s;
+  -webkit-transition: all ease 0.25s;
+  -moz-transition: all ease 0.25s;
 }
-#projects .portfolio-item .portfolio-link .caption:hover {
+#projects .projects-item .project-link .caption:hover {
   opacity: 1;
 }
-#projects .portfolio-item .portfolio-link .caption .caption-content {
+#projects .projects-item .project-link .caption .caption-content {
   position: absolute;
   width: 100%;
   height: 20px;
@@ -230,18 +220,18 @@ section.success {
   margin-top: -12px;
   color: white;
 }
-#projects .portfolio-item .portfolio-link .caption .caption-content i {
+#projects .projects-item .project-link .caption .caption-content i {
   margin-top: -12px;
 }
-#projects .portfolio-item .portfolio-link .caption .caption-content h3,
-#projects .portfolio-item .portfolio-link .caption .caption-content h4 {
+#projects .projects-item .project-link .caption .caption-content h3,
+#projects .projects-item .project-link .caption .caption-content h4 {
   margin: 0;
 }
 #projects * {
   z-index: 2;
 }
 @media (min-width: 767px) {
-  #projects .portfolio-item {
+  #projects .projects-item {
     margin: 0 0 30px;
   }
 }
@@ -381,8 +371,8 @@ fieldset[disabled] .btn-primary.active {
 .btn-success.active,
 .open .dropdown-toggle.btn-success {
   color: white;
-  background-color: #128f76;
-  border-color: #11866f;
+  background-color: #269fc3;
+  border-color: #2498ba;
 }
 .btn-success:active,
 .btn-success.active,
@@ -444,42 +434,31 @@ fieldset[disabled] .btn-success.active {
 .scroll-top .btn:focus {
   outline: none;
 }
-.portfolio-modal .modal-content {
-  border-radius: 0;
-  background-clip: border-box;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  border: none;
-  min-height: 100%;
-  padding: 100px 0;
-  text-align: center;
+.project-modal .modal-content {
+  border-radius: 2px;
 }
-.portfolio-modal .modal-content h2 {
-  margin: 0;
-  font-size: 3em;
-}
-.portfolio-modal .modal-content img {
+.project-modal .modal-content img {
   margin-bottom: 30px;
 }
-.portfolio-modal .modal-content .item-details {
+.project-modal .modal-content .item-details {
   margin: 30px 0;
 }
-.portfolio-modal .close-modal {
+.project-modal .close-modal {
   position: absolute;
-  width: 75px;
-  height: 75px;
+  width: 38px;
+  height: 38px;
   background-color: transparent;
-  top: 25px;
-  right: 25px;
+  top: 18px;
+  right: 15px;
   cursor: pointer;
 }
-.portfolio-modal .close-modal:hover {
+.project-modal .close-modal:hover {
   opacity: 0.3;
 }
-.portfolio-modal .close-modal .lr {
-  height: 75px;
+.project-modal .close-modal .lr {
+  height: 38px;
   width: 1px;
-  margin-left: 35px;
+  margin-left: 19px;
   background-color: #2C3E50;
   transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -488,8 +467,8 @@ fieldset[disabled] .btn-success.active {
   /* Safari and Chrome */
   z-index: 1051;
 }
-.portfolio-modal .close-modal .lr .rl {
-  height: 75px;
+.project-modal .close-modal .lr .rl {
+  height: 38px;
   width: 1px;
   background-color: #2C3E50;
   transform: rotate(90deg);
@@ -499,7 +478,25 @@ fieldset[disabled] .btn-success.active {
   /* Safari and Chrome */
   z-index: 1052;
 }
-.portfolio-modal .modal-backdrop {
+.project-modal .modal-backdrop {
   opacity: 0;
   display: none;
+}
+.project-modal .btn {
+  border-radius: 2px;
+}
+.project-modal .btn_default:hover {
+  color: white;
+  background-color: #42b7da;
+  border-color: #adadad;
+}
+.project-modal .project-team-tools div {
+  display: table-cell;
+}
+.project-modal .project-team-tools .infoTitle {
+  text-align: right;
+  width: 50px;
+}
+.project-modal .project-team-tools .info {
+  padding-left: 15px;
 }

@@ -24,7 +24,7 @@ a.active {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	text-transform: uppercase;
 	font-weight: 700;
 }
@@ -35,19 +35,19 @@ hr.star-primary {
     border: none;
     border-top: solid 5px;
     text-align: center;
-    max-width: 250px;
+    max-width: 150px;
     margin: 25px auto 30px;
 }
 
 hr.star-light:after,
 hr.star-primary:after {
-    content: "\f005";
-    font-family: FontAwesome;
-    display: inline-block;
-    position: relative;
-    top: -0.8em;
-    font-size: 2em;
-    padding: 0 0.25em;
+//     content: "\f005";
+//     font-family: FontAwesome;
+//     display: inline-block;
+//     position: relative;
+//     top: -0.8em;
+//     font-size: 2em;
+//     padding: 0 0.25em;
 }
 
 hr.star-light {
@@ -87,9 +87,9 @@ header {
 	.intro-text {
 		.name {
 			display: block;
-			font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+			font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
 			text-transform: uppercase;
-			font-weight: 700;
+			font-weight: 300;
 			font-size: 2em;
 		}
 		.skills {
@@ -118,9 +118,9 @@ header {
 
 .navbar-custom {
 	background: @theme-primary;
-	font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	text-transform: uppercase;
-	font-weight: 700;
+	font-weight: 400;
 	border: none;
 	a:focus {
 		outline: none;
@@ -201,7 +201,7 @@ section {
     padding: 100px 0;
     h2 {
     	margin: 0;
-    	font-size: 3em;
+    	font-size: 2em;
     }
 }
 
@@ -219,11 +219,11 @@ section.success {
 	}
 }
 
-#portfolio {
-    .portfolio-item {
+#projects {
+	.projects-item {
         margin: 0 0 15px;
         right: 0;
-        .portfolio-link {
+        .project-link {
             display: block;
             position: relative;
             max-width: 400px;
@@ -234,9 +234,9 @@ section.success {
                 width: 100%;
                 height: 100%;
                 opacity: 0;
-                transition: all ease 0.5s;
-                -webkit-transition: all ease 0.5s;
-                -moz-transition: all ease 0.5s;
+                transition: all ease 0.25s;
+                -webkit-transition: all ease 0.25s;
+                -moz-transition: all ease 0.25s;
                 &:hover {
                     opacity: 1;
                 }
@@ -266,8 +266,8 @@ section.success {
 }
 
 @media(min-width:767px) {
-    #portfolio {
-        .portfolio-item {
+    #projects {
+        .projects-item {
             margin: 0 0 30px;
         }
     }
@@ -413,20 +413,20 @@ footer {
     }
 }
 
-.portfolio-modal {
+.project-modal {
 	.modal-content {
-	    border-radius: 0;
-	    background-clip: border-box;
-	    -webkit-box-shadow: none;
-	    box-shadow: none;
-	    border: none;
-	    min-height: 100%;
-	    padding: 100px 0;
-	    text-align: center;
-		h2 {
-	    	margin: 0;
-	    	font-size: 3em;
-		}
+	    border-radius: 2px;
+	    // background-clip: border-box;
+	    // -webkit-box-shadow: none;
+	    // box-shadow: none;
+	    // border: none;
+	    // min-height: 100%;
+	    // padding: 100px 0;
+	    // text-align: center;
+		// h2 {
+	    // 	margin: 0;
+	    // 	font-size: 3em;
+		// }
 		img {
 			margin-bottom: 30px;
 		}
@@ -436,19 +436,19 @@ footer {
 	}
     .close-modal {
         position: absolute;
-        width:75px;
-        height:75px;
+        width:38px;
+        height:38px;
         background-color:transparent;
-        top: 25px;
-        right: 25px;
+        top: 18px;
+        right: 15px;
         cursor: pointer;
         &:hover {
             opacity: 0.3;
         }
         .lr {
-            height:75px;
+            height:38px;
             width:1px;
-            margin-left:35px;
+            margin-left:19px;
             background-color:@theme-primary;
             transform: rotate(45deg);
             -ms-transform: rotate(45deg);
@@ -457,7 +457,7 @@ footer {
             /* Safari and Chrome */
             z-index:1051;
             .rl {
-                height:75px;
+                height:38px;
                 width:1px;
                 background-color:@theme-primary;
                 transform: rotate(90deg);
@@ -472,5 +472,26 @@ footer {
     .modal-backdrop {
     	opacity: 0;
     	display: none;
-    }
+	}
+	// Added this
+	.btn {
+		border-radius: 2px;
+	}
+	.btn_default:hover {
+		color: white;
+		background-color: @theme-success;
+		border-color: #adadad;
+	}
+	.project-team-tools {
+		div {
+			display: table-cell;
+		}
+		.infoTitle {
+			text-align: right;
+			width: 50px;
+		}
+		.info {
+			padding-left: 15px;
+		}
+	}
 }
